@@ -1,0 +1,18 @@
+body {
+    font:normal 12px Tahoma;
+}
+
+p {margin:10px 0}
+
+#noteContainer {
+    width:400px;
+    margin:0 auto;
+}
+
+li {
+    padding:3px;
+}
+
+li:nth-child(even) {
+    background:#EEE;
+}
