@@ -1,0 +1,20 @@
+li {
+    display: table-cell;
+    background-color: yellow;
+    width:50px;
+    height:50px;
+}
+
+li:first-child {
+    background-color: red;
+}
+
+li:last-child {
+    background-color: green;
+}
+
+div {
+    height:150px;
+    width:150px;
+    background-color:red;
+}
