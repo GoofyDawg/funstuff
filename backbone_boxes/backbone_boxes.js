@@ -12,13 +12,18 @@ var ListView = Backbone.View.extend({
 
 var BoxView = Backbone.View.extend({
     el : 'div',
+    initialize : function(options) {
+        if (options.hasOwnProperty("list")) {
+            this.listenTo(options.list,'colorChanged',this.setBoxColor);
+        }
+    },
     setBoxColor : function(colorObj) {
         this.$el.css('background-color', colorObj.background);
     }
 });
 
 $(function() {
-    var list = new ListView();
-    var box = new BoxView();
-    box.listenTo(list,'colorChanged',box.setBoxColor);
+    var box = new BoxView({
+        list : new ListView()
+    });
 });
