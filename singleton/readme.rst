@@ -18,3 +18,7 @@ Backbone Implementation
 
 .. image:: singleton_class.png
 
+Notice in the class diagram above, that the ``Singleton`` object has a composite
+relationship with the ``SingletonModule``. The ``SingletonModule`` is the object
+that contains all the functionality of the ``Singleton`` which more or less just
+acts as a facade. 
