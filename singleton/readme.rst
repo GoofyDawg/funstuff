@@ -21,4 +21,9 @@ Backbone Implementation
 Notice in the class diagram above, that the ``Singleton`` object has a composite
 relationship with the ``SingletonModule``. The ``SingletonModule`` is the object
 that contains all the functionality of the ``Singleton`` which more or less just
-acts as a facade. 
+acts as a facade.
+
+You might be wondering about the ``SomeRandomClass`` and the ``Backbone.View``
+classes from which the ``SingletonModule`` inherits. That's the beauty of this
+particular design. The facade just provides a reference to the instance of the
+module. Your module could be any kind of object.
